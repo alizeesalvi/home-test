@@ -1,0 +1,43 @@
+$fonts : (poppins : "Poppins",
+);
+
+@each $key,
+$value in $fonts {
+    .font-#{$key} {
+        font-family: $value, sans-serif;
+    }
+}
+
+$sizes: (
+    0: 0,
+    25:25px,
+    60:60px,
+    70:70px,
+    125:125px,
+    336:336px,
+    400:400px,
+    450:450px,
+);
+
+@each $property,
+$value in $sizes {
+    .p-#{$property} {
+        padding: $value;
+    }
+
+    .m-#{$property} {
+        margin: $value;
+    }
+
+    .w-#{$property} {
+        width: $value;
+    }
+
+    .m-l-#{$property} {
+        margin-left: $value;
+    }
+
+    .m-r-#{$property} {
+        margin-right: $value;
+    }
+}
